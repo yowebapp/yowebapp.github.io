@@ -96,7 +96,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'git@github.com:yowebapp/yowebapp.github.io.github',
+          remote: 'https://github.com/yowebapp/yowebapp.github.io.git',
           branch: 'master',
           commit: true,
           push: true
