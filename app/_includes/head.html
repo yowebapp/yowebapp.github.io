@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+  {% if page.title %}
+    <title>{{page.title}} | Yeoman</title>
+  {% else %}
+    <title>Yeoman - Modern workflows for modern webapps</title>
+  {% endif %}
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  {% if page.category == 404 %}
+    <link href="/assets/css/404.css" rel="stylesheet">
+  {% else %}
+    <link href="/assets/css/normalize.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/footer.css" rel="stylesheet">
+    <link href="/assets/css/prettify.css" rel="stylesheet">
+  {% endif %}
+
+  {% if page.category == "codelab" %}
+    <link href="/assets/css/codelab.css" rel="stylesheet">
+  {% endif %}
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Yeoman Blog Atom Feed">
+</head>

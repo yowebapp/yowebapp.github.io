@@ -1,0 +1,32 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: Yowebapp
+description: Yeoman chinese website
+author:
+  name: Tsrot
+
+url: https://yowebapp.github.io
+atom_path: /blog/atom.xml
+
+source: app
+destination: .tmp
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+permalink: /blog/:title.html
+
+# Markdown library
+markdown: redcarpet
+
+highlighter: pygments
+
+paginate: 8
+paginate_path: /blog/page:num
+
+gems:
+- jekyll-redirect-from
