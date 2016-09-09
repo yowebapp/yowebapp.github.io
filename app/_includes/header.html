@@ -1,0 +1,35 @@
+{% capture learning %}{% include sidebars/learning.md %}{% endcapture %}
+{% capture authoring %}{% include sidebars/authoring.md %}{% endcapture %}
+{% capture contrib %}{% include sidebars/contributing.md %}{% endcapture %}
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/"><img src="/assets/img/logo.png" alt="Yeoman"></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          {% link /learning/ Using Yeoman %}
+          {{ learning | markdownify }}
+        </li>
+        <li>
+          {% link /generators/ Discovering generators %}
+        </li>
+        <li>
+          {% link /authoring/ Creating a generator %}
+          {{ authoring | markdownify }}
+        </li>
+        <li>
+          {% link /blog/ Blog %}
+        </li>
+        <li>
+          {% link /contributing/ Contributing %}
+          {{ contrib | markdownify }}
+        </li>
+      </ul>
+    </nav>
+  </div><!-- /.container -->
+</header><!-- /.page-header -->
