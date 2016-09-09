@@ -3,12 +3,12 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: Yeoman.io
-description: Yeoman website
+name: Yowebapp
+description: Yeoman chinese website
 author:
-  name: Yeoman Team
+  name: Tsrot
 
-url: http://yeoman.io
+url: https://yowebapp.github.io
 atom_path: /blog/atom.xml
 
 source: app

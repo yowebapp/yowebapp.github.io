@@ -96,7 +96,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'git@github.com:yeoman/yeoman.github.io.git',
+          remote: 'https://github.com/yowebapp/yowebapp.github.io.git',
           branch: 'master',
           commit: true,
           push: true
@@ -104,9 +104,9 @@ module.exports = function (grunt) {
       },
       travis: {
         options: {
-          remote: 'https://github.com/yeoman/yeoman.github.io.git',
+          remote: 'https://github.com/yowebapp/yowebapp.github.io.git',
           branch: 'master',
-          login: 'SBoudrias',
+          login: 'tsrot',
           token: process.env.GH_TOKEN,
           commit: true,
           push: true
