@@ -1,12 +1,12 @@
- * {% link /authoring/index.html Getting started %}
- * {% link /authoring/running-context.html Running Context %}
- * {% link /authoring/user-interactions.html User Interactions %}
- * {% link /authoring/composability.html Composability %}
- * {% link /authoring/dependencies.html Managing Dependencies %}
- * {% link /authoring/file-system.html Interacting with the file system %}
- * {% link /authoring/gruntfile.html Creating a Gruntfile %}
- * {% link /authoring/storage.html Storing  user configs %}
- * {% link /authoring/testing.html Unit testing %}
- * {% link /authoring/debugging.html Debugging Generators %}
- * {% link /authoring/integrating-yeoman.html Integrating Yeoman in other tools %}
- * [Full API documentation](http://yeoman.io/generator/)
+ * {% link /authoring/index.html 起步 %}
+ * {% link /authoring/running-context.html 启动环境 %}
+ * {% link /authoring/user-interactions.html 用户交互 %}
+ * {% link /authoring/composability.html 可组合性 %}
+ * {% link /authoring/dependencies.html 管理依赖 %}
+ * {% link /authoring/file-system.html 文件系统交互 %}
+ * {% link /authoring/gruntfile.html 创建 Gruntfile %}
+ * {% link /authoring/storage.html 保存用户设置 %}
+ * {% link /authoring/testing.html 单元测试 %}
+ * {% link /authoring/debugging.html Generators 调试 %}
+ * {% link /authoring/integrating-yeoman.html 整合 yeoman 工具 %}
+ * [API 文档](http://yeoman.io/generator/)

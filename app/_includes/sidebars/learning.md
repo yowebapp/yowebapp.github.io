@@ -1,6 +1,6 @@
- * {% link /learning/index.html Getting started %}
- * {% link /codelab/index.html Tutorial (codelab) %}
- * {% link /learning/resources.html Resources %}
- * {% link /learning/deployment.html Deployment %}
+ * {% link /learning/index.html 起步 %}
+ * {% link /codelab/index.html 指引 (codelab) %}
+ * {% link /learning/resources.html 资源 %}
+ * {% link /learning/deployment.html 部署 %}
  * {% link /learning/faq.html FAQ %}
- * {% link /learning/support.html Support %}
+ * {% link /learning/support.html 支持 %}
