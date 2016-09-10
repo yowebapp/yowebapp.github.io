@@ -1502,3 +1502,12 @@ Inlined to avoid required HTTP connection: h5bp.com/r
     page-break-after: avoid;
   }
 }
+
+/*关于作者*/
+.about-author{
+  margin-top: 50px;
+  padding:20px;
+  font-size: 0.8em; 
+  border: 1px dashed #ccc;
+  background: #eee;
+}
