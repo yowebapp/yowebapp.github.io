@@ -1,20 +1,20 @@
 ---
 layout: codelab
-title: 'Step 7: Make Todos persistent with local storage'
+title: '步骤 7: 使 TODOS 存储在本地存储中'
 markdown: 1
 ---
 
-Let’s revisit the issue of items not persisting when the browser refreshes with our React/Redux *mytodo* app.
+让我们回到这个问题，当这浏览器刷新我们的 React/Redux *mytodo* app 时，项目不能保存。
 
 <div class="note tip">
-  <p>If the persistence is not a issue for you or you're short on time, you can skip this step and jump directly to <a href="keep-going.html">the Step 8 "Get ready for production"</a>.</p>.
+  <p>如果不保存对你来说不是一个问题或者你只是短时间使用。你可以跳过这步，直接进入<a href="keep-going.html">步骤8 "准备生产"</a>。</p>
 </div>
 
-## Install npm package
+## 安装 npm 包
 
-To easily achieve this, we can use another Redux module called "[redux-localstorage](https://github.com/elgerlambert/redux-localstorage/tree/1.0-breaking-changes)" that will allow us to quickly implement [local storage](http://diveintohtml5.info/storage.html).
+很容易做到这一步，我们可以使用另一个 Redux 模块，叫做 "[redux-localstorage](https://github.com/elgerlambert/redux-localstorage/tree/1.0-breaking-changes)"，这能让我们迅速的实施[本地存储](http://diveintohtml5.info/storage.html)。
 
-Run the following command:
+运行以下命令：
 
 ```sh
 npm install --save redux-localstorage@rc
@@ -22,9 +22,9 @@ npm install --save redux-localstorage@rc
 
 ![](/assets/img/codelab/07_install_localstorage.png)
 
-## Use redux-localstorage
+## 使用 redux-localstorage
 
-The Redux store should be configured to use storage. Replace the whole your `src/app/store/configureStore.js` by this code:
+Redux 使用去存储应该配置。用下面的代码去替换你的 `src/app/store/configureStore.js`：
 
 ```js
 import {compose, createStore} from 'redux';
@@ -58,30 +58,30 @@ export default function configureStore(initialState) {
 
 ```
 
-If you look at your app in the browser, you’ll see that there are one item "Use Yeoman" in the todo list. The app is initialising the todos store if local storage is empty and we haven’t given it any todo items yet.
+如果你在浏览器中查看你的 app ，你将会看到这儿有一项 "Use Yeoman" 在这个 todo 列表中。如果本地存储是空的并且我们没有给它任何的 todo 项，这个 app 的 todos 存储是初始化的。
 
 ![](/assets/img/codelab/07_before_localstorage.png)
 
-Go ahead and add a few items to the list:
+继续前进，并添加一些项目到列表中：
 
 ![](/assets/img/codelab/07_after_localstorage.png)
 
-Now when we refresh our browser the items persist. Hooray!
+现在当我们强制刷新我们的浏览器的项目。 Hooray!
 
-We can confirm whether our data is being persisted to local storage by checking the **Resources** panel in Chrome DevTools and selecting **Local Storage** from the lefthand side:
+使用 Chrome 的开发者选项，选择**Resources**面板，然后在左边菜单中选择**Local Storage**，我们可以确认我们的数据是否被保存到本地存储：
 
 ![](/assets/img/codelab/07_show_localstorage.png)
 
 <div class="note tip">
 
-  <h2>Write unit tests</h2>
+  <h2>编写单元测试</h2>
 
-  <p>For an extra challenge, revisit unit testing in <a href="run-unit-tests.html">Step 6</a> and consider how you might update your tests now that the code is using local storage.</p>
+  <p>一个额外的挑战，重新回到<a href="run-unit-tests.html">步骤 6</a> 考虑如何可以更新您的测试，该代码正在使用本地存储。</p>
 
 </div>
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; 回到上一页</a>
   or
-  <a href="prepare-production.html">Go to the next step &raquo;</a>
+  <a href="prepare-production.html">继续下一步 &raquo;</a>
 </p>

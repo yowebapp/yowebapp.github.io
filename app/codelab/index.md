@@ -27,7 +27,7 @@ Allo! Allo! 在这个只有25分钟的 codelab， 在 [Yeoman](/) 和 [FountainJ
 * **步骤 4:** [回顾用 Yeoman 生成的 app 文件目录 &raquo;](review-generated-files.html)
 * **步骤 5:** [在浏览器上预览你的 app &raquo;](preview-inbrowser.html)
 * **步骤 6:** [用 Karma 和 Jasmine 测试你的 app &raquo;](run-unit-tests.html)
-* **步骤 7:** [使待办事项存储在本地存储中 &raquo;](local-storage.html)
+* **步骤 7:** [使 TODOS 存储在本地存储中 &raquo;](local-storage.html)
 * **步骤 8:** [准备生产 &raquo;](prepare-production.html)
 * 就像你所看到的一样， [Yeoman 还可以做更多的事 &raquo;](keep-going.html)
 

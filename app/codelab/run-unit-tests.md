@@ -1,24 +1,24 @@
 ---
 layout: codelab
-title: 'Step 6: Test with Karma and Jasmine'
+title: '步骤 6: 用 Karma 和 Jasmine 测试'
 markdown: 1
 ---
 
-For those unfamiliar with [Karma](http://karma-runner.github.io), it is a JavaScript test runner that is test framework agnostic. The fountainjs generator has included test framework [Jasmine](http://jasmine.github.io/). When we ran `yo fountain-webapp` earlier in this codelab the generator scaffolded  files with pattern `*.spec.js` in the source folder of the `mytodo` folder, created a `conf/karma.conf.js` file, and pulled in the Node modules for Karma.  We’ll be editing a Jasmine script to describe our tests soon but let’s see how we can run tests first.
+对于那些不熟悉 [Karma](http://karma-runner.github.io) 的人来说，这是一个JavaScript测试，测试框架无关。这个 fountainjs generator 还包括了测试框架 [Jasmine](http://jasmine.github.io/)。当我们在这个 codelab 里用 generator ，在 `mytodo` 文件夹里生成源文件和 `*.spec.js` 文件前去运行 `yo fountain-webapp` ，创建一个 `conf/karma.conf.js` 文件，并且用 Karma 把它推送到 Node 模块中。我们将编辑一个 Jasmine 脚本来描述我们的测试，但让我们看看我们如何运行测试。
 
-## Run unit tests
+## 运行单元测试
 
-Let’s go back to the command line and kill our local server using <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span>. There is already a npm script scaffolded out in our `package.json` for running tests. It can be run as follows:
+让我们回到命令行并且使用 <span class="keyboard">Ctrl</span>+<span class="keyboard">C</span> 杀掉本地服务器进程。这里已经存在了一个 npm 脚本构建出了我们的 `package.json` 去运行测试。我们能根据下面的命令去运行：
 
 ```sh
 npm test
 ```
 
-Every tests should pass.
+每个测试都应该通过。
 
-## Update unit tests
+## 更新单元测试
 
-You’ll find unit tests scaffolded in the `src` folder, so open up **src/app/reducers/todos.spec.js**. This is the unit test for your Todos reducer. For example we get focus on the first test who verify the initial state.
+你可以在 `src` 文件夹里找到单元测试所生成的文件，你可以打开找到 **src/app/reducers/todos.spec.js**。这个就是为你的 Todos 单元测试的减速器。例如，我们得到的重点放在第一个测试谁验证的初始状态。
 
 ```js
 it('should handle initial state', () => {
@@ -32,7 +32,7 @@ it('should handle initial state', () => {
 });
 ```
 
-And replace that test with the following:
+并用下列替换测试：
 
 ```js
 it('should handle initial state', () => {
@@ -46,17 +46,17 @@ it('should handle initial state', () => {
 });
 ```
 
-Re-running our tests with `npm test` should see our tests now failing.
+重新用 `npm test` 去运行我们的测试，我们应该可以看到测试现在失败 了。
 
 <div class="note tip">
 
-  <p>If you want run test automatically on change you can use <code>npm run test:auto</code> instead.</p>
+  <p>如果你想当我们改变的时候自动进行测试，你可以使用 <code>npm run test:auto</code> 来替换。</p>
 
 </div>
 
-Open `src/app/reducers/todos.js`.
+打开 `src/app/reducers/todos.js`.
 
-Replace the initial state by:
+取代初始状态：
 
 ```js
 const initialState = [
@@ -68,14 +68,14 @@ const initialState = [
 ];
 ```
 
-Fantastic, you have fixed the test:
+棒极了，你已经完成了测试：
 
 ![](/assets/img/codelab/06_run_test.png)
 
-Writing unit tests make it easier to catch bugs as your app gets bigger and when more developers join your team. The scaffolding feature of Yeoman makes writing unit tests easier so no excuse for not writing your own tests! ;)
+编写单元测试能使它更容易捕捉到错误，因为你的应用程序会越来越大，并且会有更多的开发人员加入你的团队。Yeoman 的脚手架功能使编写单元测试更容易，所以没有理由不为自己的 app 写测试！;)
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; 回到上一页</a>
   or
-  <a href="local-storage.html">Go to the next step &raquo;</a>
+  <a href="local-storage.html">继续下一步 &raquo;</a>
 </p>
