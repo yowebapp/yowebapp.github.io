@@ -1,36 +1,36 @@
 ---
 layout: codelab
-title: 'Step 4: Review the Yeoman-generated app'
+title: '步骤 4: 回顾用 Yeoman 生成的 app 文件目录'
 markdown: 1
 ---
 
-Open up your `mytodo` directory to take a look at what was actually scaffolded. It'll look like this:
+打开 `mytodo` 文件夹去查看已经生成了哪些文件。你将会看到像下面这样的目录结构：
 
 ![](/assets/img/codelab/04_tree_view.png)
 
-In *mytodo*, we have:
+在 *mytodo* 中， 我们有：
 
-`src`: a parent directory for our web application
+`src`: 我们的 Web 应用程序的父目录
 
-  * `app`: our React + Redux code
-  * `index.html`: the base html file
-  * `index.js`: the entry point for our TodoMVC app
+  * `app`: 我们的 React + Redux 代码
+  * `index.html`: 基本的 HTML 文件
+  * `index.js`: 我们 TodoMVC app 的入口文件
 
-`conf`: a parent directory for our configuration files for thrid-party tools (Browsersync, Webpack, Gulp, Karma)
+`conf`: 一个第三方工具给我们的配置文件的父目录 (Browsersync, Webpack, Gulp, Karma)
 
-`gulp_tasks` and `gulpfile.js`: our builder tasks
+`gulp_tasks` 和 `gulpfile.js`: 我们的构建任务
 
-`.babelrc`, `package.json,` and `node_modules`: configuration and dependencies required
+`.babelrc`, `package.json,` 和 `node_modules`: 配置和必要的依赖
 
-`.gitattributes` and `.gitignore`: configuration for git
+`.gitattributes` 和 `.gitignore`: git 配置
 
 
 <div class="note tip">
 
-  <h2>Create the first commit</h2>
+  <h2>创建第一个提交</h2>
 
-  <p>After generation and installation you should have a fresh git repository already initialzing.</p>
-  <p>You can safely add a commit to save the current state by these commands.</p>
+  <p>在文件已经生成并已经安装好其它，你需要一个已经初始化好并空的 git 仓库。</p>
+  <p>可以通过这些命令安全地添加一个提交来保存当前状态。</p>
 
 <pre>
 <code class="language-sh">git add --all && git commit -m 'First commit'</code>
@@ -40,7 +40,7 @@ In *mytodo*, we have:
 
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; 回到上一页</a>
   or
-  <a href="preview-inbrowser.html">Go to the next step &raquo;</a>
+  <a href="preview-inbrowser.html">继续下一步 &raquo;</a>
 </p>

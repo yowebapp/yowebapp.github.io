@@ -24,7 +24,7 @@ Allo! Allo! 在这个只有25分钟的 codelab， 在 [Yeoman](/) 和 [FountainJ
 * **步骤 1:** [搭建你的开发环境 &raquo;](setup.html)
 * **步骤 2:** [安装 Yeoman generator &raquo;](install-generators.html)
 * **步骤 3:** [使用一个 generator 去构建出你的 app &raquo;](scaffold-app.html)
-* **步骤 4:** [回顾用 Yeoman 生成的文件目录 &raquo;](review-generated-files.html)
+* **步骤 4:** [回顾用 Yeoman 生成的 app 文件目录 &raquo;](review-generated-files.html)
 * **步骤 5:** [在浏览器上预览你的 app &raquo;](preview-inbrowser.html)
 * **步骤 6:** [用 Karma 和 Jasmine 测试你的 app &raquo;](run-unit-tests.html)
 * **步骤 7:** [使待办事项存储在本地存储中 &raquo;](local-storage.html)
@@ -34,6 +34,6 @@ Allo! Allo! 在这个只有25分钟的 codelab， 在 [Yeoman](/) 和 [FountainJ
 这将需要大约25分钟完成这个 codelab 。最后，你会有一个流行的 todomvc app，您的计算机在未来将建立更加强大的Web应用程序。
 
 <p class="codelab-paging">
-  让我们去开始把
+  让我们去开始吧
   <a href="setup.html">步骤 1 &raquo;</a>
 </p>
