@@ -1,28 +1,28 @@
 ---
 layout: codelab
-title: 'Step 2: Install a Yeoman generator'
+title: '步骤 2: 安装 Yeoman generator'
 markdown: 1
 ---
 
-In a traditional web development workflow, you would need to spend a lot of time setting up boilerplate code for your webapp, downloading dependencies, and manually creating your web folder structure. Yeoman generators to the rescue! Let's install a generator for FountainJS projects.
+在传统的 Web 开发流程中，你需要为你的 webapp 花大量的时间建立框架代码，下载依赖，并手动创建 web 的文件夹结构。Yeoman generators 可以拯救你！让我们去为你的 FountainJS 项目安装一个 generator 。
 
-## Install an generator
+## 安装一个 generator
 
-You can install Yeoman generators using the [npm](https://www.npmjs.com/) command and there are over [3500+ generators](/generators/) now available, many of which have been written by the open-source community.
+你可以使用 [npm](https://www.npmjs.com/) 命令安装 Yeoman generators ，这里现在已经有了超过and there are over [3500+ generators](/generators/) ，其中有许多是由开源社区写的。
 
-Install [generator-fountain-webapp](https://www.npmjs.com/package/generator-fountain-webapp) using this command:
+安装 [generator-fountain-webapp](https://www.npmjs.com/package/generator-fountain-webapp) 使用命令:
 
 ```sh
 npm install --global generator-fountain-webapp
 ```
 
-This will start to install the Node packages required for the generator.
+为这个 generator 安装它的 Node 依赖包。
 
 <div class="note important">
 
-  <h2>Errors?</h2>
+  <h2>错误?</h2>
 
-  <p>If you see permission or access errors, such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. You can consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this guide</a> for a more robust solution.</p>
+  <p>如果你看到权限或访问错误， 如 <code>EPERM</code> 或者 <code>EACCESS</code>，不要使用 <code>sudo</code> 作为一个解决方法。你可以咨询 <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">本指南</a>的一个更强大的解决方案。</p>
 
 </div>
 
@@ -30,7 +30,7 @@ This will start to install the Node packages required for the generator.
 
 <div class="note tip">
 
-  <p>Along with using <code>npm install</code> directly, you can search for generators via the Yeoman interactive menu. Run <code>yo</code> and select <b>Install a generator</b> to search for published generators.</p>
+  <p>使用 <code>npm install</code> 直接安装， 你可以通过 Yeoman 交互菜单搜索到generators。运行 <code>yo</code> 然后选择 <b>安装一个 generator</b> 在已经推送的 generators 中。</p>
 
   <img src="/assets/img/codelab/02_yo_interactive.png">
 
@@ -38,7 +38,7 @@ This will start to install the Node packages required for the generator.
 
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; 回到上一页</a>
   or
-  <a href="scaffold-app.html">Go to the next step &raquo;</a>
+  <a href="scaffold-app.html">继续下一步 &raquo;</a>
 </p>

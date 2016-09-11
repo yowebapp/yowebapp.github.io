@@ -1,6 +1,6 @@
 ---
 layout: codelab
-title: 'Step 1: Set up your dev environment'
+title: '步骤 1: 搭建你的开发环境'
 markdown: 1
 ---
 
@@ -8,40 +8,40 @@ markdown: 1
   <img src="/assets/img/yeoman-004.png">
 </p>
 
-Most of your interactions with Yeoman will be through the command line. Run commands in the Terminal app if you’re on Mac, your shell in Linux, or [`cmder`](http://cmder.net/) *(preferably)* / PowerShell / `cmd.exe` if you are on Windows.
+你的大多数交互将通过 Yeoman 命令行。如果你的电脑是 Mac ，你可以用 Terminal 运行命令，如果是 Linus 可以用 shell，如果在 windows 上，可以用 [`cmder`](http://cmder.net/) *(preferably)* / PowerShell / `cmd.exe` 。
 
-## Install prerequisites
+## 安装前准备
 
-Before installing Yeoman, you will need the following:
+在安装 Yeoman 前你需要先安装如下工具：
 
-* Node.js v4 or higher
-* npm (which comes bundled with Node)
+* Node.js v4 或者更高版本
+* npm (将会和 Node 绑定安装)
 * git
 
-You can check if you have Node and npm installed by typing:
+你可以用下面的方式去检测一下你是否安装了 Node 和 npm ：
 
 ```sh
 node --version && npm --version
 ```
 
-If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the *.msi* for Windows or *.pkg* for Mac from the [NodeJS website](https://nodejs.org/).
+如果你需要更新或安装 Node ，最简单的方法是用你平台的安装器。从 [NodeJS 官网](https://nodejs.org/)windows 用户可以安装 *.msi* 后缀的安装包，Mac 用户安装*.pkg* 后缀的安装包。
 
-The [npm](https://www.npmjs.com/) package manager is bundled with Node, although you might need to update it. Some Node versions ship with rather old versions of npm. You can update npm using this command:
+[npm](https://www.npmjs.com/) 包管理器是和 Node 绑定在一起的, 虽然你也可能需要去更新它。一些 Node 版本可能安装了比较老的 npm版本，你可以使用下面的命令去更新 npm：
 
 ```sh
 npm install --global npm@latest
 ```
 
-You can check if you have Git installed by typing:
+你可以使用下面的方式检查是否安装了 git:
 
 ```sh
 git --version
 ```
-If you don't have Git, grab the installers from the [git website](https://git-scm.com/).
+如果你没有安装 git，你可以到 [git 官网](https://git-scm.com/)下载安装。
 
-## Install the Yeoman toolset
+## 安装 Yeoman 工具集
 
-Once you’ve got Node installed, install the Yeoman toolset:
+如果你已经安装了 Node，安装 Yeoman 工具集：
 
 ```sh
 npm install --global yo
@@ -49,15 +49,15 @@ npm install --global yo
 
 <div class="note important">
 
-  <h2>Errors?</h2>
+  <h2>错误?</h2>
 
-  <p>If you see permission or access errors, such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. You can consult <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">this guide</a> for a more robust solution.</p>
+  <p>如果你看到权限或访问错误， 如 <code>EPERM</code> 或者 <code>EACCESS</code>，不要使用 <code>sudo</code> 作为一个解决方法。你可以咨询 <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">本指南</a>的一个更强大的解决方案。</p>
 
 </div>
 
-## Confirm installation
+## 验证安装成功
 
-It is a good idea to check that everything is installed as expected by running commonly used Yeoman commands like `yo` with the `--version` flag as follows:
+使用 Yeoman 命令行，像 `yo` 命令检查版本标志`--version`，这是一个好方法检查所有的安装是否如预期的一样：
 
 ```sh
 yo --version
@@ -65,14 +65,14 @@ yo --version
 
 <div class="note important">
 
-  <h2>Versions of the CLI tools that this codelab works with</h2>
+  <h2>codelab 工作在 CLI 工具的版本</h2>
 
-  <p>Technology changes quickly! This tutorial has been tested with <strong>yo 1.8.4</strong>. If you are running into issues with a newer version, we would like to hear about it. Please open up an issue on our <a href="https://github.com/yeoman/yo/issues">tracker</a>.</p>
+  <p>技术变化很快！这个教程的测试使用的是 <strong>yo 1.8.4</strong>版本。如果你使用一个新版本出现了问题，请告诉我们我们会尽快解决它。 请你创建一个 issue 在 <a href="https://github.com/yeoman/yo/issues">tracker</a>中。</p>
 
 </div>
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; 回到上一页</a>
   or
-  <a href="install-generators.html">Go to the next step &raquo;</a>
+  <a href="install-generators.html">继续下一步 &raquo;</a>
 </p>
