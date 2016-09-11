@@ -1,46 +1,46 @@
 ---
 layout: codelab
-title: 'Step 8: Get ready for production'
+title: '步骤 8: 准备生产'
 markdown: 1
 ---
 
-Ready to show your beautiful todo app to the world? Let’s try to build a production-ready version of it which we can ship.
+准备好了给大家展示你漂亮的 todo app 了吗？让我们尝试建立一个可以运行的准备版本。
 
 <div class="mast-holder">
   <img src="/assets/img/yeoman-009.png">
 </div>
 
-## Optimize files for production
+## 优化生产文件
 
-To create a production version of our application, we’ll want to:
+创建我们的应用程序的生产版本，我们将要做：
 
-* lint our code,
-* concatenate and minify our scripts and styles to save on those network requests,
-* compile the output of any preprocessors we’re using, and
-* generally make our application really lean.
+* 检查代码,
+* 合并和压缩我们的脚本和样式来优化网络请求,
+* 使用一些编译预处理器来处理我们的输出，
+* 使我们的应用更加精简快速。
 
-Phew! Amazingly we can achieve all of this just by running:
+哎呀！令人惊讶的是，我们可以实现所有这一切只是通过运行：
 
 ```sh
 npm run build
 ```
 
-Your lean, production-ready application is now available in a `dist` folder in the root of your `mytodo` project. These are the files that you can put on your server using FTP or any other deployment service.
+你的精简，准备版本的应用现在保存在 `mytodo` 项目中的 `dist` 文件夹中。这些文件你可以使用 FTP 或者其它的服务器部署工具把它上传到你的服务器。
 
-## Build and preview the production-ready app
+## 建立和预览生产准备的应用程序
 
-Want to preview your production app locally? That’s just another simple npm script:
+想在本地预览您的生产应用程序吗？可以运行这个简单的 NPM 脚本：
 
 ```sh
 npm run serve:dist
 ```
 
-It will build your project and launch a local web server. Yo Hero!
+它将建立您的项目，并启动一个本地 Web 服务器。Yo Hero!
 
 ![](/assets/img/codelab/08_serve_dist.png)
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; Return to overview</a>
+  <a href="index.html#toc">&laquo; 回到上一页</a>
   or
-  <a href="keep-going.html">You're done! Keep going &raquo;</a>
+  <a href="keep-going.html">完成！保持前进 &raquo;</a>
 </p>
