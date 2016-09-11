@@ -33,8 +33,8 @@
         } else if (y >= fixedElementOffset && y + fixedElementHeight >= footerOffset) {
           var fixEl = (fixedElementHeight / 2) + fixedElementHeight;
           var newOffset = $footer.offset().top - fixEl;
-          $context.removeClass('navbar-fixed').addClass('navbar-absolute');
-          $context.css({'top': newOffset, 'right': '0'});
+          // $context.removeClass('navbar-fixed').addClass('navbar-absolute');
+          // $context.css({'top': newOffset, 'right': '0'});
         }
       });
     }
