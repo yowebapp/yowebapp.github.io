@@ -1,15 +1,15 @@
 ---
 layout: default
 markdown: 1
-title: Learning resources
+title: 学习资源
 sidebar: sidebars/learning.md
 ---
 
-# Articles And Tutorials
+# 文章和教程
 
-The below is by no means an exhaustive list of Yeoman articles, just a few that we recommend.
+以下是 Yeoman 的文章一个详尽的列表， 我们建议的只是少数。
 
-*Feel free to add additional ones, but make sure it's something of value and include the date.*
+*你可以随意添加额外的，但要确保它的东西的价值，包括日期。*
 
 * [Быстрая инициализация проекта](http://frontender.info/skaffolding-dlya-frontenderov/)
 * [Пишем свой генератор для Yeoman](http://frontender.info/generator-yeoman/)
@@ -26,60 +26,74 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
 * [Improved Developer Tooling and Yeoman](http://addyosmani.com/blog/improved-developer-tooling-and-yeoman/)
 * [Getting a Yeoman App Working on a New Machine after Cloning](http://www.justinmccandless.com/blog/Getting+a+Yeoman+App+Working+on+a+New+Machine+after+Cloning)
 
-** Translations **
+** 翻译 **
 
-[Let's scaffold a Web App](http://yeoman.io/codelab/index.html) translated to Russian: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman) by [EveryCloudTech](http://www.everycloudtech.com/)
+[构建一个 Web App](http://yeoman.io/codelab/index.html) [EveryCloudTech](http://www.everycloudtech.com/)翻译成了俄语: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman)。
 
+# 视频
 
-# Videos
-
-<p>Below you can find a selection of videos and tutorials recorded by members of the Yeoman community.</p>
+<p>下面你可以找到一些由 Yeoman 社区成员录制的视频和教程。</p>
 
 <section>
-  <h2 class="hero-title">A 5 Minute Introduction To Yeoman</h2>
+  <h2 class="hero-title">Yeoman 5 分钟介绍</h2>
   <div class="row tutorial">
   <div class="video-container">
-    <iframe width="640" height="360" src="//www.youtube.com/embed/zBt2g9ekiug" frameborder="0" allowfullscreen class="yt"></iframe>
+    <video width="640" height="360" controls>
+      <source src="http://7xqcdm.com1.z0.glb.clouddn.com/Getting%20started%20with%20Yeoman%20and%20generator-webapp.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
   </div>
-  <p>We also have a video on scaffolding <a href="https://www.youtube.com/watch?v=RO8TdD5EuNs">Bootstrap</a> projects with Yeoman.</p>
+  <p>我们也有一个关于用 Yeoman 构建 <a href="https://www.youtube.com/watch?v=RO8TdD5EuNs">Bootstrap</a>项目的视频。</p>
   </div>
 </section>
 
 <section>
-  <h2 class="hero-title">Tutorial: Building A WebApp With Yeoman</h2>
+  <h2 class="hero-title">教程: 用 Yeoman 创建一个 Web App</h2>
   <div class="row tutorial">
-  <p>In this walkthrough we will author, build and deploy a complete application using the Yeoman workflow.</p>
+  <p>在本演示中，将使用 Yeoman 工作流完整的实现一个应用程序的创作、构建和部署。</p>
   <div class="video-container">
-    <iframe width="640" height="360" src="//www.youtube.com/embed/iUQ1fvdO9GY" frameborder="0" allowfullscreen class="yt"></iframe>
-  </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="hero-title">An Intro To Yeoman Sub-generators</h2>
-  <div class="row tutorial">
-  <div class="video-container">
-    <iframe width="640" height="360" src="//www.youtube.com/embed/rYwJ5-esSYE" frameborder="0" allowfullscreen class="yt"></iframe>
+    <video width="640" height="360" controls>
+      <source src="http://7xqcdm.com1.z0.glb.clouddn.com/Automating%20Your%20Front-End%20Workflow%20With%20Yeoman%201.0.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
   </div>
   </div>
 </section>
 
 <section>
-  <h2 class="hero-title">NebraskaJS: An Intro To Yo, Grunt and Bower</h2>
+  <h2 class="hero-title">Yeoman Sub-generators 简介</h2>
   <div class="row tutorial">
-  <p>Tooling fan Andrew Wirick talks about Yeoman, Grunt, and Bower at the NebraskaJS meetup.</p>
   <div class="video-container">
-    <iframe width="640" height="360" src="//www.youtube.com/embed/TUk19YoP-oI" frameborder="0" allowfullscreen class="yt"></iframe>
+    <video width="640" height="360" controls>
+      <source src="http://7xqcdm.com1.z0.glb.clouddn.com/An%20Introduction%20To%20Yeoman%20Sub-generators.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
   </div>
-  <p>In case you're looking for some more persuasion that Yeoman can help automate your JavaScript development workflow, you might be interested in Jesse Warden's <a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> on Bower and Grunt.</p>
   </div>
 </section>
 
 <section>
-  <h2 class="hero-title">Building a Polymer app with Yeoman (DotJS)</h2>
+  <h2 class="hero-title">NebraskaJS: Yo, Grunt 和 Bower 简介</h2>
+  <div class="row tutorial">
+  <p>工具迷 Andrew Wirick 将谈论 Yeoman, Grunt, 和 Bower 在 NebraskaJS meetup 的作用。</p>
+  <div class="video-container">
+    <video width="640" height="360" controls>
+      <source src="http://7xqcdm.com1.z0.glb.clouddn.com/Andrew%20Wirick%20at%20NebraskaJS%20-%20Yeoman.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
+  </div>
+  <p>如果你正在寻找一些更具说服力，Yeoman可以帮助自动化你的JavaScript的开发工作流程，你可能对 Jesse Warden 的<a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> 感兴趣，用 Bower 和 Grunt。</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="hero-title">用 Yeoman (DotJS) 创建一个 Polymer app</h2>
   <div class="row tutorial">
   <div class="video-container">
-    <iframe width="640" height="360" src="//www.youtube.com/embed/Yd6Q4Wwvpd0" frameborder="0" allowfullscreen class="yt"></iframe>
+    <video width="640" height="360" controls>
+      <source src="http://7xqcdm.com1.z0.glb.clouddn.com/Building%20a%20Polymer%20app%20with%20Yeoman%20%28DotJS%29.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
   </div>
   </div>
 </section>
@@ -88,7 +102,10 @@ The below is by no means an exhaustive list of Yeoman articles, just a few that 
   <h2 class="hero-title">Yeoman</h2>
   <div class="row tutorial">
   <div class="video-container">
-    <iframe width="640" height="360" src="//www.youtube.com/embed/Hl1sp9axHEY" frameborder="0" allowfullscreen class="yt"></iframe>
+    <video width="640" height="360" controls>
+      <source src="http://7xqcdm.com1.z0.glb.clouddn.com/Yeoman%20with%20Addy%20Osmani.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
   </div>
   </div>
 </section>
