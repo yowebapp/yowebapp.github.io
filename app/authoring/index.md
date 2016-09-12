@@ -6,9 +6,9 @@ sidebar: sidebars/authoring.md
 excerpt: Just starting out with generators? Start here
 ---
 
-Generators are the building blocks of the Yeoman ecosystem. They're the plugins run by `yo` to generate files for end users.
+Generators 是 Yeoman 生态系统的基础。它是一个重要组件，运行 `yo` 为终端用户生成项目文件。
 
-In reading this section, you'll learn how to create and distribute your own.
+在这部分，你将学习如何创建和分配自己的项目。
 
 <aside class="excerpt">
   Note: We built a <a href="https://github.com/yeoman/generator-generator">generator-generator</a> to help users get started with their own generator. Feel free to use it to bootstrap your own generator once you understand the below concepts.

@@ -173,6 +173,12 @@ module.exports = function (grunt) {
     'buildcontrol'
   ]);
 
+  grunt.registerTask('deploy-git', [
+    'check',
+    'build',
+    'buildcontrol:dist'
+  ]);
+
   grunt.registerTask('deploy-travis', [
     'check',
     'build',
