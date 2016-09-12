@@ -1,7 +1,7 @@
 ---
 layout: default
 markdown: 1
-title: Frequently Asked Questions
+title: 常见问题
 sidebar: sidebars/learning.md
 class: faq-page
 ---

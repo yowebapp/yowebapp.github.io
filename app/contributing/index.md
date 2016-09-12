@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contributing
+title: 贡献
 category: contributing
 sidebar: sidebars/contributing.md
 excerpt: The yeoman project contribution guidelines

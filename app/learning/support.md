@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Support
+title: 支持
 sidebar: sidebars/learning.md
 ---
 

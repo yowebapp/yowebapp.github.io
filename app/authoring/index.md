@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Writing Your Own Yeoman Generator
+title: 写一个属于你的 Yeoman Generator
 category: authoring
 sidebar: sidebars/authoring.md
 excerpt: Just starting out with generators? Start here

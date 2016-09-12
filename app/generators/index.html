@@ -5,54 +5,54 @@ title: Generators
 class: discovery-page
 ---
   <section class="main">
-    <a id="instructions-toggle">How to add your generator &raquo;</a>
+    <a id="instructions-toggle">怎样添加你的 generator &raquo;</a>
     <div id="instructions" style="display:none">
       <p>
-        Your generator will automatically show up in the list if it meets the following criteria. The list is populated every hour.
+        如果你的 generator 符合下列标准，它将会自动展示到这个列表中。这个列表每隔一小时更新一次。
       </p>
       <ul>
-        <li>Be published on the npmjs.org repository</li>
+        <li>更新到 npmjs.org 仓库</li>
         <li>
-          Have the following in the module's <code>package.json</code> file:
+          有以下模块的 <code>package.json</code> 文件:
           <ul>
-            <li>The name should be <code>generator-your-unique-name</code>. This means it should begin with `generator-` and be followed by a unique (to npm) name. Scoped name support is coming in the future.</li>
-            <li><code>yeoman-generator</code> in the keyword property.</li>
-            <li>A good description. If you forked the generator, it should describe what is different and why it was forked.</li>
+            <li>它的名字应该定为 <code>generator-your-unique-name</code>。这意味着它应该以 `generator-` 开头，并且遵循 npm 的命名统一标准。作用域名称支持未来的扩展。</li>
+            <li><code>yeoman-generator</code> 符合关键词特性。</li>
+            <li>一个好的描述。如果它只是一个 generator 的分支，你应该描述它与别的分支的不同和为什么要把它作为一个分支。</li>
           </ul>
         </li>
         <li>
-          It'd be nice if it also had the following information:
+          如果它也有以下信息这将是很好：
           <ul>
-            <li>Author information including name and link to your homepage.</li>
-            <li>Generator documention link as its website.</li>
-            <li>Github link in its repository field. <strong>Note: If your Github repo is no longer available, your generator will not show up in the list until you remove or update the repo field.</strong></li>
+            <li>作者信息，包括名称和链接到您的主页。</li>
+            <li>Generator 的文献链接网站。</li>
+            <li>Github 链接到你的仓库。 <strong>注意: 如果你的 Github 仓库将不能访问。您的 generator 将不会出现在列表中，直到您删除或更新这个仓库。</strong></li>
           </ul>
         </li>
       </ul>
       <p>
-        If you don't follow these guidelines, your generator may get added to the <a href="#linkneeded">blacklist</a>. If your generator is on there, please fix the issues we notified you about and then submit a PR to remove the entry from the blacklist.
+        如果你不遵循这些准则，你的 generator 可能会被添加到<a href="#linkneeded">黑名单</a>。如果你的 generator 已经在这了，请解决我们通知你的问题，然后提交一个PR，以从黑名单的条目中删除。
       </p>
     </div>
 
     <hr>
 
     <div id="plugins-all">
-      <p>Loading generators...</p>
+      <p>加载 generators 中，请稍等...</p>
     </div>
-    <div class="message" id="search-notfound">No matching generator found. Try something else.</div>
+    <div class="message" id="search-notfound">没有发现匹配的 generator。试一下其它的。</div>
   </section>
 
   <script type="text/template" id="plugins-all-template">
     <table class="table">
       <caption>
-        <input class="search input-medium search-query" type="search" placeholder="Search in <%= it.modules.length %> generators..." autofocus>
+        <input class="search input-medium search-query" type="search" placeholder="搜索到 <%= it.modules.length %> generators..." autofocus>
       </caption>
       <thead>
         <tr>
           <th class="sort" data-sort="name">Generator</th>
-          <th class="sort metadata last-updated" data-sort="updated">Last Updated</th>
+          <th class="sort metadata last-updated" data-sort="updated">最后更新</th>
           <th class="sort metadata" data-sort="stars">Stars</th>
-          <th class="sort metadata" data-sort="downloads">Installs</th>
+          <th class="sort metadata" data-sort="downloads">安装量</th>
         </tr>
       </thead>
       <tbody class="list">
