@@ -11,19 +11,19 @@ Generators 是 Yeoman 生态系统的基础。它是一个重要组件，运行 
 在这部分，你将学习如何创建和分配自己的项目。
 
 <aside class="excerpt">
-  Note: We built a <a href="https://github.com/yeoman/generator-generator">generator-generator</a> to help users get started with their own generator. Feel free to use it to bootstrap your own generator once you understand the below concepts.
+  Note: 我们将建立一个 <a href="https://github.com/yeoman/generator-generator">generator-generator</a> 去帮助用户去开始他们自己的 generator。一旦你理解下面的概念，就可以自由地使用它来引导你自己的 generator。
 </aside>
 
 
-## Organizing your generators
+## 组织你的 generators
 
-### Setting up as a node module
+### 作为一个 node module 设置
 
-A generator is, at its core, a Node.js module.
+一个 generator 的核心就是一个 Node.js 模块。
 
-First, create a folder within which you'll write your generator. This folder must be named `generator-name` (where `name` is the name of your generator). This is important, as Yeoman relies on the file system to find available generators.
+首先，为你即将写的 generator 创建一个文件夹。这个文件夹必须命名为 `generator-name` (这里的 `name` 就是你 generator 的名字)。这是很重要的，作为 Yeoman 的依赖文件系统来查找可用的 generators。 
 
-Once inside your generator folder, create a `package.json` file. This file is a Node.js module manifest. You can generate this file by running `npm init` from your command line or by entering the following manually:
+进入你的 generator 文件夹，创建一个 `package.json` 文件。 这个文件表明它是一个 Node.js 模块。你可以在你的命令行里运行 `npm init` 来生成这个文件或手动输入一下代码：
 
 ```json
 {
@@ -41,23 +41,23 @@ Once inside your generator folder, create a `package.json` file. This file is a 
 }
 ```
 
-The `name` property must be prefixed by `generator-`. The `keywords` property must contain `"yeoman-generator"` and the repo must have a description to be indexed by our [generators page](/generators).
+这个 generator `name` 属性必须以 `generator-` 为前缀。这个 `keywords` 属性必须包含 `"yeoman-generator"` 并且这个仓库必须有一个描述被索引到我们的 [generators 页面](/generators)。
 
-You should make sure you set the latest version of `yeoman-generator` as a dependency. You can do this by running: `npm install --save yeoman-generator`.
+你应该确保你设置了最新版本的 `yeoman-generator` 作为一个依赖。你可以去运行：`npm install --save yeoman-generator`。
 
-The `files` property must be an array of files and directories that is used by your generator.
+“file” 属性必须是由你的 generator 使用的文件排列和目录。
 
-Add other [`package.json` properties](https://docs.npmjs.com/files/package.json#files) as needed.
+根据需要加入其他的 [`package.json` 属性](https://docs.npmjs.com/files/package.json#files)。
 
-### Folder tree
+### 文件树
 
-Yeoman is deeply linked to the file system and to how you structure your directory tree. Each sub-generator is contained within its own folder.
+Yeoman 会深度链接到文件系统和你如何组织你的目录树。每个 sub-generator 都将包含在你自己的文件夹。
 
-The default generator used when you call `yo name` is the `app` generator. This must be contained within the `app/` directory.
+当你使用 `yo name` 为这个 `app` 的 generator时，这个默认的 generator 将会被使用。这必须包含在 `app/` 目录中。
 
-Sub-generators, used when you call `yo name:subcommand`, are stored in folders named exactly like the sub command.
+当你使用 `yo name:subcommand` 时 Sub-generators 将被使用，存储在文件夹中，名字完全像一个子命令。
 
-In an example project, a directory tree could look like this:
+在一个示例项目中，目录树可能看起来像这样：
 
 ```
 ├───package.json
@@ -67,11 +67,11 @@ In an example project, a directory tree could look like this:
     └───index.js
 ```
 
-This generator will expose `yo name` and `yo name:router` commands.
+这个 generator 将暴露 `yo name` 和 `yo name:router` 命令。
 
-You may not like keeping all your code at the root of your folder. Luckily, Yeoman allows for two different directory structures. It'll look in `./` and in `generators/` to register available generators.
+你可能不喜欢把你所有的代码都保存在文件夹的根目录下。 幸运的是，Yeoman 允许在两个不同的目录结构。它会在 `./` 和 `generators/`中寻找去注册可用的 generators。
 
-The previous example can be written as follows:
+前面的例子也可以是如下：
 
 ```
 ├───package.json
@@ -82,7 +82,7 @@ The previous example can be written as follows:
         └───index.js
 ```
 
-If you use this second directory structure, make sure you point the `files` property in your `package.json` at the `generators` folder.
+如果您使用此第二个目录结构，确保你已经在你的 `generators` 文件夹下的 `package.json` 的 `files` 属性中指出。
 
 ```json
 {
@@ -94,7 +94,7 @@ If you use this second directory structure, make sure you point the `files` prop
 ```
 
 
-## Extending generator
+## 扩展 generator
 
 Once you have this structure in place, it's time to write the actual generator.
 
