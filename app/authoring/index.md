@@ -96,11 +96,11 @@ Yeoman 会深度链接到文件系统和你如何组织你的目录树。每个 
 
 ## 扩展 generator
 
-Once you have this structure in place, it's time to write the actual generator.
+一旦你的结构准备就绪，就可以开始写一个实际的 generator 了。
 
-Yeoman offers a base generator which you can extend to implement your own behavior. This base generator will add most of the functionalities you'd expect to ease your task.
+Yeoman 提供了一个基础的 generator，你可以扩展到实现你自己的行为。这个基本的 generator 将添加大部分的功能，希望能减轻你的任务。
 
-Here's how you extend the base generator:
+怎样由这个基本的 generator 去扩展呢：
 
 ```js
 var generators = require('yeoman-generator');
@@ -108,15 +108,15 @@ var generators = require('yeoman-generator');
 module.exports = generators.Base.extend();
 ```
 
-The `extend` method will extend the base class and allow you to provide a new prototype. This functionality comes from the [Class-extend](https://github.com/SBoudrias/class-extend) module and should be familiar if you've ever worked with Backbone.
+这个 `extend` 方法将扩展基本的类并允许你提供一个新的原型。此功能来自 [Class-extend](https://github.com/SBoudrias/class-extend) 模块，并且如果你使用过 Backbone 你应该很熟悉。
 
-We assign the extended generator to `module.exports` to make it available to the ecosystem. This is how we [export modules in Node.js](https://nodejs.org/api/modules.html#modules_module_exports).
+我们将扩展的 generator 分配给 `module.exports`，使其能够提供给生态系统。这就是我们在 [Node.js 的接口模块](https://nodejs.org/api/modules.html#modules_module_exports)。
 
-### Overwriting the constructor
+### 重写构造函数
 
-Some generator methods can only be called inside the `constructor` function. These special methods may do things like set up important state controls and may not function outside of the constructor.
+一些 generator 方法只能在 `cconstrutor` 函数中调用。这些特殊的方法可以做类似设置重要的状态控件的事情，也可能不在构造函数之外的函数。
 
-To override the generator constructor, you pass a constructor function to `extend()` like so:
+重写 generator 构造器，你可以通过一个构造函数去 `extend()` 像这样：
 
 ```js
 module.exports = generators.Base.extend({
@@ -131,11 +131,11 @@ module.exports = generators.Base.extend({
 });
 ```
 
-### Adding your own functionality
+### 添加你自己的功能
 
-Every method added to the prototype is run once the generator is called--and usually in sequence. But, as we'll see in the next section, some special method names will trigger a specific run order.
+每个被加入到原型的方法，generator 都会运行一次，这叫做常驻序列。但是，正如我们在下一节中看到的，一些特殊的方法名称将触发一个特定的运行顺序。
 
-Let's add some methods:
+让我们添加一些方法：
 
 ```js
 module.exports = generators.Base.extend({
@@ -148,37 +148,37 @@ module.exports = generators.Base.extend({
 });
 ```
 
-When we run the generator later, you'll see these lines logged to the console.
+当我们运行 generator 后，你会看到这些线程记录将打印到控制台。
 
 
-## Running the generator
+## 运行 generator
 
-At this point, you have a working generator. The next logical step would be to run it and see if it works.
+在这一点上，你有一个工作的 generator。下一个合乎逻辑的步骤是运行它，看看它是否工作。
 
-Since you're developing the generator locally, it's not yet available as a global npm module. A global module may be created and symlinked to a local one, using npm. Here's what you'll want to do:
+因为你是在本地开发的 generator，它还不能够作为一个全局的 npm 模块去获取。一个全局模块可以被创建并能使用 npm 链接到本地。你可能想这样做：
 
-On the command line, from the root of your generator project (in the `generator-name/` folder), type:
+在命令行中，从你的 generator 项目的根目录（在 `generator-name/` 文件夹），打印：
 
 ```
 npm link
 ```
 
-That will install your project dependencies and symlink a global module to your local file. After npm is done, you'll be able to call `yo name` and you should see the `console.log`, defined earlier, rendered in the terminal. Congratulations, you just built your first generator!
+这将安装您的项目依赖项和链接一个全局模块到本地文件。npm 下载完后，你将能够使用 `yo name`,并且你应该能看到 `console.log`,预先定义，在终端中渲染。祝贺你，你已经建立了你的第一个 generator！
 
 
-### Finding the project root
+### 找到项目根目录
 
-While running a generator, Yeoman will try to figure some things out based on the context of the folder it's running from.
+当你运行一个 generator，Yeoman 将以文件夹内容为基础计算出一些事情，然后运行它。
 
-Most importantly, Yeoman searches the directory tree for a `.yo-rc.json` file. If found, it considers the location of the file as the root of the project. Behind the scenes, Yeoman will change the current directory to the `.yo-rc.json` file location and run the requested generator there.
+最重要的是，Yeoman 将从目录树中搜索 `.yo-rc.json`文件。如果发现，它会以该文件的位置作为项目的根。在后台，Yeoman 会该改变 `.yo-rc.json` 文件在当前文件的定位，并且在那儿运行 generator 请求。
 
-The Storage module creates the `.yo-rc.json` file. Calling `this.config.save()` from a generator for the first time will create the file.
+存储模块创建 `.yo-rc.json` 文件。generator 在第一次运行 `this.config.save()` 将创建这个文件。
 
-So, if your generator is not running in your current working directory, make sure you don't have a `.yo-rc.json` somewhere up the directory tree.
+所以，如果您的 generator 没有在您当前的工作目录中运行，确保你是否有 `.yo-rc.json` 在你的目录树中。
 
 
-## Where to go from here?
+## 接下来做什么？
 
-After reading this, you should be able to create a local generator and run it.
+读到这里之后，您应该能够创建一个本地 generator 并运行它。
 
-If this is your first time writing a generator, you should definitely read the next section on [running context and the run loop](/authoring/running-context.html). This section is vital to understanding the context in which your generator will run, and to ensure that it will compose well with other generators in the Yeoman ecosystem. The other sections of the documentation will present functionality available within the Yeoman core to help you achieve your goals.
+如果这是你第一次写一个 generator，你一定要读下一节 [运行上下文和循环运行](/authoring/running-context.html)。这一部分是理解 generator 运行语境至关重要，并确保它将与其它的 generator 和谐的组成 Yeoman 生态系统。文档的其他部分将提供的功能在Yeoman 的核心，它就是用来帮助你实现你的目标。
