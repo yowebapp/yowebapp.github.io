@@ -57,35 +57,35 @@ this.prompt({
 });
 ```
 
-_Note:_ Providing a default value will prevent the user from returning any empty answers.
+_Note:_ 提供一个默认值将阻止用户返回任何空的答案。
 
-If you're only looking to store data without being directly tied to the prompt, make sure to checkout [the Yeoman storage documentation](/authoring/storage.html).
+如果你只是想存储数据而不直接绑定到提示，确保校验 [Yeoman 存储文档](/authoring/storage.html)。
 
-### Arguments
+### 参数
 
-Arguments are passed directly from the command line:
+参数直接从命令行传递：
 
 ```
 yo webapp my-project
 ```
 
-In this example, `my-project` would be the first argument.
+在这个例子， `my-project` 可能是第一个参数。
 
-To notify the system that we expect an argument, we use the `generator.argument()` method. This method accepts a `name` (String) and an optional hash of options.
+通知系统，我们期望一个参数,我们使用 `generator.argument()` 方法。这个方法接收一个 `name`(string) 并且选项可选哈希。
 
-The `name` will be used to create a getter on the generator: `generator['name']`.
+`name` 适用于在 generator 创建一个 getter:`generator['name']`。
 
-The options hash accepts multiple key-value pairs:
+哈希选项接受多个键值对：
 
-- `desc` Description for the argument
-- `required` Boolean whether it is required
-- `optional` Boolean whether it is optional
-- `type` String, Number, Array, or Object
-- `defaults` Default value for this argument
+- `desc` 参数描述
+- `required` Boolean,是否是必需的
+- `optional` Boolean,是否是可选的
+- `type` String, Number, Array, 或者 Object
+- `defaults` 这个参数的默认值
 
-This method must be called inside the `constructor` method. Otherwise Yeoman won't be able to output the relevant help information when a user calls your generator with the help option: e.g. `yo webapp --help`.
+此方法必须在`constructor`方法中调用。否则，Yeoman 将不能够输出相关的帮助信息，当用户使用帮助选项调用您的 generator：e.g. `yo webapp --help`
 
-Here is an example:
+这儿有个例子：
 
 ```js
 var _ = require('lodash');
@@ -105,25 +105,24 @@ module.exports = generators.Base.extend({
 
 ### Options
 
-Options look a lot like arguments, but they are written as command line _flags_.
+Options 看起来很像参数，但在命令行写的时候它们只是作为一个 _信号_.
 
 ```
 yo webapp --coffee
 ```
+通知系统，我们期望一个选项，我们使用 `generator.option()` 方法。这个方法接收一个 `name`(string) 并且选项可选哈希。
 
-To notify the system we expect an option, we use the `generator.option()` method. This method accepts a `name` (String) and an optional hash of options.
+该`name`值将被用于获取在匹配的密钥`generator.options[name]`的参数。
 
-The `name` value will be used to retrieve the argument at the matching key `generator.options[name]`.
+哈希选项（第二个参数）接受多个键值对：
 
-The options hash (the second argument) accepts multiple key-value pairs:
+- `desc` 选项描述
+- `alias` 别名
+- `type` Boolean, String 或者 Number
+- `defaults` 默认值
+- `hide` Boolean，是否从帮助隐藏
 
-- `desc` Description for the option
-- `alias` Short name for option
-- `type` Either Boolean, String or Number
-- `defaults` Default value
-- `hide` Boolean whether to hide from help
-
-Here is an example:
+这儿有个例子：
 
 ```js
 module.exports = generators.Base.extend({
@@ -139,11 +138,12 @@ module.exports = generators.Base.extend({
 });
 ```
 
-## Outputting Information
+## 输出信息
 
-Outputting information is handled by the `generator.log` module.
+输出信息由`generator.log`模块处理。
 
-The main method you'll use is simply `generator.log` (e.g. `generator.log('Hey! Welcome to my awesome generator')`). It takes a string and outputs it to the user; basically it mimics `console.log()` when used inside of a terminal session. You can use it like so:
+你将使用的主要方法是简单的`generator.log`(e.g. `generator.log('Hey! Welcome to my awesome generator')`)。
+它需要一个字符串，并将其输出给用户;它的使用，基本上模仿终端会话内'console.log()`。你也可以这样使用它：
 
 ```js
 module.exports = generators.Base.extend({
@@ -153,4 +153,4 @@ module.exports = generators.Base.extend({
 });
 ```
 
-There's also some other helper methods you can find in the [API documentation](http://yeoman.io/environment/TerminalAdapter.html).
+还有一些其他的辅助方法，你可以在[API documentation](http://yeoman.io/environment/TerminalAdapter.html)找到。
