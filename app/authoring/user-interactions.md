@@ -1,24 +1,24 @@
 ---
 layout: documentation
-title: Interacting With The User
+title: 用户交互
 category: authoring
 sidebar: sidebars/authoring.md
 excerpt: Its all about the users in the end
 ---
 
-Your generator will interact a lot with the end user. By default Yeoman runs on a terminal, but it also supports custom user interfaces that different tools can provide. For example, nothing prevents a Yeoman generator from being run inside of a graphical tool like an editor or a standalone app.
+你的 generator 将与最终用户互动。默认情况下，Yeoman 运行在终端，但是它还支持不同的工具可以提供的自定义用户界面。例如，没有什么能阻止 Yeoman generator 运行在一个图形化的工具，像编辑或一个独立的应用程序在运行。
 
-To allow for this flexibility, Yeoman provides a set of user interface element abstractions. It is your responsibility as an author to only use those abstractions when interacting with your end user. Using other ways will probably prevent your generator from running correctly in different Yeoman tools.
+为了允许这种灵活性，Yeoman 提供了一组用户界面元素的抽象。作为一个作者这是你的责任，当你的最终用户使用时，可以使用这些抽象。用其他方式可能会阻止你的 generator 在不同的 Yeoman 工具中正确运行。
 
-For example, it is important to never use `console.log()` or `process.stdout.write()` to output content. Using them would hide the output from users not using a terminal. Instead, always rely on the UI generic `generator.log()` method, where `generator` is the context of your current generator.
+例如，从不使用 'console.log()`或`process.stdout.write()` 去输出内容是很重要的。使用它们会隐藏不使用终端用户的输出。相反，总是依靠UI通用`generator.log()`方法，其中`generator`是您当前 generator 的上下文。
 
-## User interactions
+## 用户交互
 
 ### Prompts
 
-Prompts are the main way a generator interacts with a user. The prompt module is provided by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) and you should refer [to its API](https://github.com/SBoudrias/Inquirer.js) for a list of available prompt options.
+Prompts 是一个 generator 与用户交互的主要方式。prompt 模块由 [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)提供，你可以参考它的 [API](https://github.com/SBoudrias/Inquirer.js)，在可用的提示选项列表。
 
-The `prompt` method is asynchronous and return a promise. You'll need to return the promise from your task in order to wait for it's completion before running the next one. ([learn more about asynchronous task](/authoring/running-context.html))
+`prompt` 方法是异步的并且返回一个 promise。在你运行下一个任务前去完成它，你需要返回 promise。([了解更多的异步任务](/authoring/running-context.html))
 
 ```js
 module.exports = generators.Base.extend({
@@ -40,13 +40,13 @@ module.exports = generators.Base.extend({
 })
 ```
 
-Note here that we use the [`prompting` queue](/authoring/running-context.html) to ask for feedback from the user.
+请注意这里，我们使用[`prompting` 队列](/authoring/running-context.html) 向用户要求反馈。
 
-#### Remembering user preferences
+#### 记住用户的喜好
 
-A user may give the same input to certain questions every time they run your generator. For these questions, you probably want to remember what the user answered previously and use that answer as the new `default`.
+用户可以在他们运行你的 generator时，每一次都给予相同的输入到某些问题。对于这些问题，您可能想记住用户以前的回答，并使用该答案作为新的 `default`。
 
-Yeoman extends the Inquirer.js API by adding a `store` property to question objects. This property allows you to specify that the user provided answer should be used as the default answer in the future. This can be done as follows:
+Yeoman 扩展了 Inquirer.js API，通过加入了一个 `store` 属性去问对象。此属性允许您指定，用户提供的答案应该作为未来的默认答案使用。这可以如下做：
 
 ```js
 this.prompt({
