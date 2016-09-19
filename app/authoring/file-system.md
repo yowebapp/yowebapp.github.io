@@ -1,12 +1,12 @@
 ---
 layout: documentation
-title: Working With The File System
+title: 与文件系统工作
 category: authoring
 sidebar: sidebars/authoring.md
 excerpt: How to interact with the file system in efficient ways
 ---
 
-## Location contexts and paths
+## 定位上下文和路径
 
 Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are folders your generator will most likely read from and write to.
 

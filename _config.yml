@@ -8,7 +8,7 @@ description: Yeoman chinese website
 author:
   name: Tsrot
 
-url: https://yowebapp.github.io
+url: http://www.yowebapp.com
 atom_path: /blog/atom.xml
 
 source: app
