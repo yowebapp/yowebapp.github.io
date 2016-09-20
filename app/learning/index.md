@@ -69,9 +69,9 @@ yo webapp --help
 npm home generator-webapp
 ```
 
-Generators 去搭建复杂的框架就像提供额外的 generators 去搭建一个项目的小部分。这些 generators 就是我们通常提到的 _sub-generators_ ，并且成功的作为 `generator:sub-generator`。
+Generators 去搭建复杂的框架就像提供额外的 generators 去搭建一个项目的小部分。这些 generators 就是我们通常提到的 _sub-generators_ ，并且它们的访问可以用 `generator:sub-generator`。
 
-拿 `generator-angular` 来作为一个例子。一旦一个完整的 angular app 被构建，其它的特性也能被加入。在这个项目中去加入一些新的控制器，然后用 sub-generator 去控制：
+拿 `generator-angular` 来作为一个例子。一旦一个完整的 angular app 被构建，其它的特性也能被加入。如果在这个项目中去加入一个新的控制器，可以运行控制器的 sub-generator：
 
 ```sh
 yo angular:controller MyNewController
@@ -80,11 +80,11 @@ yo angular:controller MyNewController
 
 ### yo 其它的一些命令
 
-除了前一部分所涉及的基本知识，`yo` 也是一个充分的交互工具，简单的在命令面板中打印 `yo` 将提供一个列表选项去管理关于 generators 的所有事情：run, update, install, help 和 其它的功能。
+除了前一部分所涉及的基本知识，`yo` 也是一个充分的交互工具，简单的在命令面板中打印 `yo` 将提供一个列表选项去管理关于 generators 的所有事情：run, update, install, help 和其它的功能。
 
 Yo 也能提供下面这些命令。
 
-- `yo --help` 访问完整的帮助屏幕
+- `yo --help` 访问完整的帮助文档
 - `yo --generators` 列出所有已经安装的 generators
 - `yo --version` 得到它的版本
 
