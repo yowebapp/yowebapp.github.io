@@ -6,14 +6,14 @@ redirect_from: '/codelab.html'
 
 <p class="authors">来自 Mehdy Dara</p>
 
-Allo! Allo! 在这个只有25分钟的 codelab， 在 [Yeoman](/) 和 [FountainJS](http://fountainjs.io) 的帮助下，您将从零开始建立一个全功能的 Web 应用程序。这个示例应用程序将被写入 [React](https://facebook.github.io/react/), [Angular2](https://angular.io/) 或者 [Angular1](https://angularjs.org/)。
+Allo! Allo! 在这个只有25分钟的 codelab， 在 [Yeoman](/) 和 [FountainJS](http://fountainjs.io) 的帮助下，您将从零开始建立一个全功能的 Web 应用程序。这个示例应用程序将用 [React](https://facebook.github.io/react/), [Angular2](https://angular.io/) 或者 [Angular1](https://angularjs.org/)。
 <p class="mast-intro"><img src="/assets/img/yeoman-008.png"></p>
 
 你可以一点都不了解 React 或者 Angular ，我们将带你一起熟悉它。当然，我们假设你有以前的一些JavaScript的经验。
 
 ## 用 Yeoman 创建一个实例 App
 
-您将创建的示例 Web 应用程序将是一个 [TodoMVC](http://todomvc.com/) 的实现。你可以添加待办事项，删除待办事项，过滤所有，和我们一起拯救所有脱机添加功能。
+您将创建的示例 Web 应用程序将是一个 [TodoMVC](http://todomvc.com/) 的实现。你可以添加待办事项，删除待办事项，过滤所有，并且我们将添加离线保存功能。
 
 ![完成后的一个 TodoMVC app](/assets/img/codelab/00_Finished_TodoMVC_app.png)
 
