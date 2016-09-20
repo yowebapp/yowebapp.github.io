@@ -8,7 +8,7 @@ markdown: 1
   <img src="/assets/img/yeoman-004.png">
 </p>
 
-你的大多数交互将通过 Yeoman 命令行。如果你的电脑是 Mac ，你可以用 Terminal 运行命令，如果是 Linus 可以用 shell，如果在 windows 上，可以用 [`cmder`](http://cmder.net/) *(preferably)* / PowerShell / `cmd.exe` 。
+你的大多数交互将通过 Yeoman 命令行。如果你的电脑是 Mac ，你可以用 Terminal 运行命令，如果是 Linus 可以用 shell，如果在 windows 上，可以用 [`cmder`](http://cmder.net/) *(更可取)* / PowerShell / `cmd.exe` 。
 
 ## 安装前准备
 
