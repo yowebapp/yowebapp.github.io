@@ -8,7 +8,7 @@ markdown: 1
 
 ## 安装一个 generator
 
-你可以使用 [npm](https://www.npmjs.com/) 命令安装 Yeoman generators ，这里现在已经有了超过and there are over [3500+ generators](/generators/) ，其中有许多是由开源社区写的。
+你可以使用 [npm](https://www.npmjs.com/) 命令安装 Yeoman generators ，这里现在已经有了超过 [3500+ generators](/generators/) ，其中有许多是由开源社区写的。
 
 安装 [generator-fountain-webapp](https://www.npmjs.com/package/generator-fountain-webapp) 使用命令:
 
