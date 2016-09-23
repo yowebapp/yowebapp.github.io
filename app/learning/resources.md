@@ -7,7 +7,7 @@ sidebar: sidebars/learning.md
 
 # 文章和教程
 
-以下是 Yeoman 的文章一个详尽的列表， 我们建议的只是少数。
+以下是一个详尽的 Yeoman 文章列表， 我们建议的只是少数。
 
 *你可以随意添加额外的，但要确保它的东西的价值，包括日期。*
 
@@ -28,7 +28,7 @@ sidebar: sidebars/learning.md
 
 ** 翻译 **
 
-[构建一个 Web App](http://yeoman.io/codelab/index.html) [EveryCloudTech](http://www.everycloudtech.com/)翻译成了俄语: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman)。
+[构建一个 Web App](http://yeoman.io/codelab/index.html)，[EveryCloudTech](http://www.everycloudtech.com/)把它翻译成了俄语: [Давайте построим веб-приложение c Yeoman](http://www.everycloudtech.com/Yeoman)。
 
 # 视频
 
@@ -82,7 +82,7 @@ sidebar: sidebars/learning.md
       您的浏览器不支持 video 标签。
     </video>
   </div>
-  <p>如果你正在寻找一些更具说服力，Yeoman可以帮助自动化你的JavaScript的开发工作流程，你可能对 Jesse Warden 的<a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> 感兴趣，用 Bower 和 Grunt。</p>
+  <p>如果你正在寻找一些更具说服力的东西，Yeoman可以帮助自动化你的JavaScript的开发工作流程，你可能对 Jesse Warden 的<a href="https://www.youtube.com/watch?v=vkRv0r_tNXY">crash course</a> 感兴趣，用 Bower 和 Grunt。</p>
   </div>
 </section>
 
