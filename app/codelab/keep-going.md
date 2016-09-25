@@ -26,10 +26,10 @@ Yeoman 支持构建更多的 webapp ，像 angular 和一些其它的应用框�
 
 ## 下一步干什么
 
-* **Yeoman** 将一直更新着。请务必检查 [yeoman.io](http://yeoman.io)，为你提供更多的信息，并且你可以关注 [@yeoman](https://twitter.com/yeoman) 和 [+Yeoman](https://plus.google.com/101063139999404044459/posts) 保持最新。
+* **Yeoman** 将一直更新着。请务必经常浏览 [yeoman.io](http://yeoman.io)，它将为你提供更多的信息，并且你可以关注 [@yeoman](https://twitter.com/yeoman) 和 [+Yeoman](https://plus.google.com/101063139999404044459/posts) 保持最新。
 * **Fountain** generators ([fountainjs.io](http://fountainjs.io)) 帮助我们快速和优雅的写 Todo app。 关注 [@YeomanFountain](https://twitter.com/yeomanfountain) 获取最新的功能和新版本。
 * **React** ([facebook.github.io/react](https://facebook.github.io/react/)) 一个用于构建用户界面的 JavaScript 库。
-* **Angular2** ([angular.io](https://angular.io/)) 一个可以运行在所有平台上开发的框架。
+* **Angular2** ([angular.io](https://angular.io/)) 一个可以运行在所有平台上的开发框架。
 * **Webpack** ([webpack.github.io](https://webpack.github.io/)) 一个模块打包工具，它可以下载模块依赖和生成静态资源文件。
 * **JSPM** ([jspm.io](http://jspm.io/)) 一个浏览器友好的包管理工具。加载一些格式化的模块(ES6, AMD, CommonJS 和 globals)直接从一些扁平依赖管理 registry 仓库，例如 npm 和 Github。
 
