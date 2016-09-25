@@ -4,7 +4,7 @@ title: '步骤 6: 用 Karma 和 Jasmine 测试'
 markdown: 1
 ---
 
-对于那些不熟悉 [Karma](http://karma-runner.github.io) 的人来说，这是一个JavaScript测试，测试框架无关。这个 fountainjs generator 还包括了测试框架 [Jasmine](http://jasmine.github.io/)。当我们在这个 codelab 里用 generator ，在 `mytodo` 文件夹里生成源文件和 `*.spec.js` 文件前去运行 `yo fountain-webapp` ，创建一个 `conf/karma.conf.js` 文件，并且用 Karma 把它推送到 Node 模块中。我们将编辑一个 Jasmine 脚本来描述我们的测试，但让我们看看我们如何运行测试。
+对于那些不熟悉 [Karma](http://karma-runner.github.io) 的人来说，它是一个JavaScript测试器，与所测试的框架无关。这个 fountainjs generator 还包括了测试框架 [Jasmine](http://jasmine.github.io/)。当我们在这个 codelab 里用 generator ，在 `mytodo` 文件夹里生成源文件和 `*.spec.js` 文件前去运行 `yo fountain-webapp` ，会创建一个 `conf/karma.conf.js` 文件，并且用 Karma 把它推送到 Node 模块中。我们将编辑一个 Jasmine 脚本来描述我们的测试，但让我们看看我们如何运行测试。
 
 ## 运行单元测试
 
@@ -18,7 +18,7 @@ npm test
 
 ## 更新单元测试
 
-你可以在 `src` 文件夹里找到单元测试所生成的文件，你可以打开找到 **src/app/reducers/todos.spec.js**。这个就是为你的 Todos 单元测试的减速器。例如，我们得到的重点放在第一个测试谁验证的初始状态。
+你可以在 `src` 文件夹里找到单元测试所生成的文件，你可以打开找到 **src/app/reducers/todos.spec.js**。这个就是 Todos 单元测试的还原剂。例如，我们得到的重点放在第一个，测试谁验证的初始状态。
 
 ```js
 it('should handle initial state', () => {
