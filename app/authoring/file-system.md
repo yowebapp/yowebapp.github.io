@@ -8,15 +8,15 @@ excerpt: How to interact with the file system in efficient ways
 
 ## 定位上下文和路径
 
-Yeoman file utilities are based on the idea you always have two location contexts on disk. These contexts are folders your generator will most likely read from and write to.
+Yeoman 文件工具是基于这个想法，你的上下文在磁盘上总是有两个定位。这些文件的上下文将由 generator 最可能去读写。
 
-### Destination context
+### 目标上下文
 
-The first context is the _destination context_. The destination is the folder in which Yeoman will be scaffolding a new application. It is your user project folder, it is where you'll write most of the scaffolding.
+第一个上下文就是_目标上下文_。这个目标文件夹将由 Yeoman 脚手架搭建的一个新运用。这就是你的项目文件夹，它将写入大量由脚手架生成的文件。
 
-The destination context is defined as either the current working directory or the closest parent folder containing a `.yo-rc.json` file. The `.yo-rc.json` file defines the root of a Yeoman project. This file allows your user to run commands in subdirectories and have them work on the project. This ensures a consistent behaviour for the end user.
+目标上下文被定义为当前工作目录或包含`.yo-rc.json`文件的最接近的父文件夹。`.yo-rc.json`文件定义了 Yeoman 项目的更目录。这个文件允许你的用户在子目录运行命令，并且它们将会工作在项目。这保证了终端用户的一致的行为。
 
-You can **get** the _destination path_ using `generator.destinationRoot()` or by joining a path using `generator.destinationPath('sub/path')`.
+你可以使用`generator.destinationRoot()` **得到**目标路径，或者使用`generator.destinationPath('sub/path')`加入路径。
 
 ```js
 // Given destination root is ~/projects
@@ -30,10 +30,10 @@ generators.Base.extend({
   }
 });
 ```
+并且你可以使用`generator.destinationRoot('new/path')`手动的设置它。但对于一致性，你可能不应该更改默认的目标。
 
-And you can manually set it using `generator.destinationRoot('new/path')`. But for consistency, you probably shouldn't change the default destination.
 
-### Template context
+### 模板上下文
 
 The template context is the folder in which you store your template files. It is usually the folder from which you'll read and copy.
 
