@@ -35,11 +35,11 @@ generators.Base.extend({
 
 ### 模板上下文
 
-The template context is the folder in which you store your template files. It is usually the folder from which you'll read and copy.
+模板上下文是你存储模板文件的文件夹。它通常是你读和复制的文件夹。
 
-The template context is defined as `./templates/` by default. You can overwrite this default by using `generator.sourceRoot('new/template/path')`.
+模板上下文默认被定义为`./templates/`。你可以使用`generator.sourceRoot('new/template/path')`去重写这个默认值。
 
-You can get the path value using `generator.sourceRoot()` or by joining a path using `generator.templatePath('app/index.js')`.
+你可以使用`generator.sourceRoot()`得到路径值，或者通过使用`generator.templatePath('app/index.js')`加入一个路径。
 
 ```js
 generators.Base.extend({
@@ -53,27 +53,27 @@ generators.Base.extend({
 });
 ```
 
-## An "in memory" file system
+## 一个在”内存中“的文件系统
 
-Yeoman is very careful when it comes to overwriting users files. Basically, every write happening on a pre-existing file will go through a conflict resolution process. This process requires that the user validate every file write that overwrites content to its file.
+Yeoman 是非常小心的，当要去重写用户文件时。基本上，在一个预先存在的文件上发生的每一次写入都会经历一个冲突解决过程。这个过程要求用户验证每一个重写内容的文件的写入。
 
-This behaviour prevents bad surprises and limits the risk of errors. On the other hand, this means every file is written asynchronously to the disk.
+这种行为可以防止坏的惊喜，并限制了错误的风险。另一方面，这意味着每一个文件都是异步写入磁盘的。
 
-As asynchronous APIs are harder to use, Yeoman provide a synchronous file-system API where every file gets written to an [in-memory file system](https://github.com/sboudrias/mem-fs) and are only written to disk once when Yeoman is done running.
+由于异步API是很难使用，Yeoman 提供了一个异步的文件系统API，每一个文件都被写入到一个[内存文件系统](https://github.com/sboudrias/mem-fs)中，并且是当Yeoman运行完成时，只有写入磁盘一次。
 
-This memory file system is shared between all [composed generators](/authoring/composability.html).
+该存储文件系统在所有[组成的generators](/authoring/composability.html)之间共享。
 
-## File utilities
+## 文件工具
 
-Generators expose all file methods on `this.fs`, which is an instance of [mem-fs editor](https://github.com/sboudrias/mem-fs-editor) - make sure to check the [module documentation](https://github.com/sboudrias/mem-fs-editor) for all available methods.
+Generators 在`this.fs`暴露了所有的文件的方法，这是一个实例，[mem-fs editor](https://github.com/sboudrias/mem-fs-editor) - 确保为所有可获得的方法选择[模块文件](https://github.com/sboudrias/mem-fs-editor)。
 
-It is worth noting that although `this.fs` exposes `commit`, you should not call it in your generator. Yeoman calls this internally after the conflicts stage of the run loop.
+值得注意的是，通过`this.fs`暴露`commit`，你不应该在你的generator去调用它。Yeoman 在运行循环的冲突阶段结束后，在内部调用它。
 
-### Example: Copying a template file
+### 举例：复制一个模板文件
 
-Here's an example where we'd want to copy and process a template file.
+这里有一个例子，我们希望复制和处理一个模板文件。
 
-Given the content of `./templates/index.html` is:
+`./templates/index.html` 的内容是:
 
 ```html
 <html>
@@ -83,7 +83,7 @@ Given the content of `./templates/index.html` is:
 </html>
 ```
 
-We'll then use the [`copyTpl`](https://github.com/sboudrias/mem-fs-editor#copyfrom-to-options) method to copy the file while processing the content as a template. `copyTpl` is using [ejs template syntax](http://ejs.co).
+然后，我们将使用[copytpl](https://github.com/sboudrias/mem-fs-editor#copyfrom-to-options)方法去复制作为模板的处理中的文件。`copyTpl`使用的是[ejs 模板引擎](http://ejs.co)。
 
 ```js
 generators.Base.extend({
@@ -97,7 +97,7 @@ generators.Base.extend({
 });
 ```
 
-Once the generator is done running, `public/index.html` will contain:
+一旦generator运行成功，`public/index.html`将会包含：
 
 ```html
 <html>
@@ -107,45 +107,45 @@ Once the generator is done running, `public/index.html` will contain:
 </html>
 ```
 
-## Transform output files through streams
+## 通过流转换输出文件
 
-The generator system allows you to apply custom filters on every file writes. Automatically beautifying files, normalizing whitespace, etc, is totally possible.
+该generator系统允许你在每一个文件上应用自定义筛选器去写入文件。自动美化文件，规范空格，等等，是完全可能的。
 
-Once per Yeoman process, we will write every modified files to disk. This process is passed through a [vinyl](https://github.com/wearefractal/vinyl) object stream (just like [gulp](http://gulpjs.com/)). Any generator author can register a `transformStream` to modify the file path and/or the content.
+Yeoman每一次处理，我们将把每一个修改过的文件都写到磁盘上。这个过程是通过一个[vinyl](https://github.com/wearefractal/vinyl)对象流（就像[gulp](http://gulpjs.com/)）。一些generator作者可能会注册一个`transformStream`去修改文件路径，和内容。
 
-Registering a new modifier is done through the `registerTransformStream()` method. Here's an example:
+通过`registerTransformStream()`方法，注册一个新的修改器。这儿有个例子：
 
 ```js
 var beautify = require('gulp-beautify');
 this.registerTransformStream(beautify({indentSize: 2 }));
 ```
 
-Note that **every file of any type will be passed through this stream**. Make sure any transform stream will passthrough the files it doesn't support. Tools like [gulp-if](https://github.com/robrich/gulp-if) or [gulp-filter](https://github.com/sindresorhus/gulp-filter) will help filter invalid types and pass them through.
+请注意，**任何类型的每一个文件都将通过该流**。确保任何变换流将通过不支持的文件。像[gulp-if](https://github.com/robrich/gulp-if) 或 [gulp-filter](https://github.com/sindresorhus/gulp-filter)工具将帮助过滤不合法类型，并且将它们排出。
 
-You can basically use any _gulp_ plugins with the Yeoman transform stream to process generated files during the writing phase.
+你基本上可以使用一些gulp插件与Yeoman变换流去处理在写入阶段中生成的文件。
 
-## Legacy File utilities
+## 传统的文件工具
 
-Yeoman also exposes a set of older file utilities. You can refer to the [API documentation](http://yeoman.io/generator/actions_actions.html) to learn more about them.
+Yeoman 也暴露了一系列更老的文件工具。你可以参考[API 文档](http://yeoman.io/generator/actions_actions.html)去学习更多。
 
-The legacy file utilities have been back ported to use the in memory file system. As such, they're safe to use. Although be careful, these methods make a lot of assumptions and as a result will produce edge cases. When possible, prefer the more explicit new `fs` API.
+传统的文件工具已经重新移植到内存文件系统。因此，他们是可以安全使用。但是要小心，这些方法做了很多产生意外情况的假设。如果可能的话，选择更加明确的新的`fs` API。
 
-The legacy file system make the assumption you want to write to the _destination context_ and you want to read from the _template context_. As so, they don't require you to pass in a complete path, they'll resolve them automatically.
+传统的文件系统做了一个假设，你想写入_目标上下文_，你想从_模板上下文中_读取。因此，他们不需要你在一个完整的路径，他们会自动解析他们。
 
-Also, legacy methods like `template` and `copy` will automatically process some templates passing the generator (e.g. `this`) as the data object.
+此外，传统的方法，如模板和复制将自动处理某些模板传递给 generator（例如`this`）作为数据对象。
 
-## Tip: Update existing file's content
+## Tip: 更新现有文件的内容
 
-Updating a pre-existing file is not always a simple task. The most reliable way to do so is to parse the file AST ([abstract syntax tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree)) and edit it. The main issue with this solution is that editing an AST can be verbose and a bit hard to grasp.
+更新预先存在的文件不总是一个简单的任务。最可靠的方法是这样做，为了解析AST（[抽象语法树](http://en.wikipedia.org/wiki/Abstract_syntax_tree)）文件，并对其进行编辑。这种解决方案的主要问题是，编辑AST可以是冗长，有点难以把握。
 
-Some popular AST parsers are:
+一些流行的AST分析器:
 
-- [Cheerio](https://github.com/cheeriojs/cheerio) for parsing HTML.
-- [Esprima](https://github.com/ariya/esprima) for parsing JavaScript - you might be interested in [AST-Query](https://github.com/SBoudrias/ast-query) which provide a lower level API to edit Esprima syntax tree.
-- For JSON files, you can use the native [`JSON` object methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
+- [Cheerio](https://github.com/cheeriojs/cheerio) 解析 HTML.
+- [Esprima](https://github.com/ariya/esprima) 解析 JavaScript - 你可能对[AST-Query](https://github.com/SBoudrias/ast-query)感兴趣，其提供较低级别的API来编辑Esprima语法树。
+- JSON 文件，你可能使用原生的 [`JSON` 对象方法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
-Parsing a code file with RegEx is perilous path, and before doing so, you should read [this CS anthropological answers](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454) and grasp the flaws of RegEx parsing. If you do choose to edit existing files using RegEx rather than AST tree, please be careful and provide complete unit tests. - Please please, don't break your users' code.
+用正则表达式去解析一个代码文件是一种危险的方法，这样做之前，你应该阅读[CS人类学答案](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags#answer-1732454)，并掌握正则表达式解析的缺陷。如果你选择使用正则表达式编辑已有的文件，而不是AST树，请小心，并提供完整的单元测试。- Please please，不要打断你的用户的代码。
 
-## Tip: Writing a Gruntfile
+## Tip: 写 Gruntfile 文件
 
-Refer to the dedicated [Gruntfile documentation](/authoring/gruntfile.html).
+参考 [Gruntfile 文档](/authoring/gruntfile.html).
