@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Debugging Generators
+title: 调试 Generators
 category: authoring
 sidebar: sidebars/authoring.md
 excerpt: Not everyone always writes perfect code. Learn how to debug Generators

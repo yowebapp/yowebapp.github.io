@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Managing Configuration
+title: 管理配置
 category: authoring
 sidebar: sidebars/authoring.md
 excerpt: Making generators customizable through configuration and storage

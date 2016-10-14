@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Integrating Yeoman
+title: 整合 Yeoman
 category: authoring
 sidebar: sidebars/authoring.md
 excerpt: How to integrate the Yeoman system in your own tools
