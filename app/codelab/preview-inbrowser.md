@@ -47,7 +47,7 @@ npm run serve
 </div>
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="review-generated-files.html">&laquo; 回到上一页</a>
   or
   <a href="run-unit-tests.html">继续下一步 &raquo;</a>
 </p>

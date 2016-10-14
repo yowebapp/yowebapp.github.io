@@ -75,7 +75,7 @@ const initialState = [
 编写单元测试能使它更容易捕捉到错误，因为你的应用程序会越来越大，并且会有更多的开发人员加入你的团队。Yeoman 的脚手架功能使编写单元测试更容易，所以没有理由不为自己的 app 写测试！;)
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="preview-inbrowser.html">&laquo; 回到上一页</a>
   or
   <a href="local-storage.html">继续下一步 &raquo;</a>
 </p>

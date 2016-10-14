@@ -40,7 +40,7 @@ npm run serve:dist
 ![](/assets/img/codelab/08_serve_dist.png)
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="local-storage.html">&laquo; 回到上一页</a>
   or
   <a href="keep-going.html">完成！保持前进 &raquo;</a>
 </p>

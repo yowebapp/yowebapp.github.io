@@ -36,5 +36,5 @@ Yeoman 支持构建更多的 webapp ，像 angular 和一些其它的应用框�
 现在把 Yeoman 的帽子交给你。谢谢！
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="prepare-production.html">&laquo; 回到上一页</a>
 </p>

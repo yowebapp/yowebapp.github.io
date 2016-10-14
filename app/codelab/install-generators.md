@@ -38,7 +38,7 @@ npm install --global generator-fountain-webapp
 
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="setup.html">&laquo; 回到上一页</a>
   or
   <a href="scaffold-app.html">继续下一步 &raquo;</a>
 </p>

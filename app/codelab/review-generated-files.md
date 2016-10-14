@@ -40,7 +40,7 @@ markdown: 1
 
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="scaffold-app.html">&laquo; 回到上一页</a>
   or
   <a href="preview-inbrowser.html">继续下一步 &raquo;</a>
 </p>

@@ -48,8 +48,8 @@ FountainJS generator 提供了一些选项来选择你喜欢的：
 
 * 框架 ([React](https://facebook.github.io/react/)， [Angular2](https://angular.io/) 或者 [Angular1](https://angularjs.org/))
 * 模块管理 ([Webpack](https://webpack.github.io/), [SystemJS](https://github.com/systemjs/systemjs) 或者 [None with Bower](http://bower.io/))
-* javascript 预处理器 ([Babel](https://babeljs.io/)， [TypeScript](https://www.typescriptlang.org/) 或者没有)
-* css 预处理器 ([SASS](http://sass-lang.com/), [LESS](http://lesscss.org/) 或者没有)
+* javascript 预处理器 ([Babel](https://babeljs.io/)， [TypeScript](https://www.typescriptlang.org/) 或者不使用)
+* css 预处理器 ([SASS](http://sass-lang.com/), [LESS](http://lesscss.org/) 或者不使用)
 * 三个示例 app (a landing page, hello world, 和 TodoMVC)
 
 对于这个 codelab, 我们将使用 **React**, **Webpack**, **Babel**, **SASS** 和 **Redux TodoMVC** 作为示例。
@@ -65,7 +65,7 @@ Yeoman 将会自动地构建出你的 app，安装依赖。 几分钟后，我�
 ![](/assets/img/codelab/03_yo_end.png)
 
 <p class="codelab-paging">
-  <a href="index.html#toc">&laquo; 回到上一页</a>
+  <a href="install-generators.html">&laquo; 回到上一页</a>
   or
   <a href="review-generated-files.html">继续下一步 &raquo;</a>
 </p>
