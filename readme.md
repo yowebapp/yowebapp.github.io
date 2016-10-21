@@ -10,6 +10,8 @@
 
 ## 贡献
 
+如果你对Yeoman有兴趣，那你就对Yeoman中文贡献你的一份力量吧。（你可以提issues，说明你想加入Yeoman中文，或者你可以先Fork，然后推送PR。）
+
 这个网站使用的是[Jekyll](https://github.com/mojombo/jekyll/) 和 [generator-jekyllrb](https://github.com/robwierzbowski/generator-jekyllrb).
 
 起步:
